@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Please create a new folder in your "scratch" directory called "appl_genomics".
+cd /scratch/jmr9441
+mkdir appl_genomics
+
+# Under this folder, create two folders: "week_1_linux_intro" and "week_2_slurm_jobs"
+cd appl_genomics
+mkdir week_1_linus_intro week_2_slurm_jobs
+
+# Under "week_1_linux_intro", create "lecture_exercise" and "assignment"
+cd week_1_linus_intro/
+mkdir lecture_exercise assignment
+
+# Move the files you used on the Wednesday (2/3) lecture to "lecture exercise".
+cd ~
+mv /home/jmr9441/Cassavagenes.txt /scratch/jmr9441/appl_genomics/week_1_linus_intro/lecture_exercise/
+mv /home/jmr9441/Genes.txt /scratch/jmr9441/appl_genomics/week_1_linus_intro/lecture_exercise/
+
+# Under "assignment", create the following folders: "data", "result".
+cd /scratch/jmr9441/appl_genomics/week_1_linus_intro/assignment/
+mkdir data result
+
+# Download this Fly gene annotation from "ftp://ftp.flybase.org/genomes/dmel/current/gtf/dmel-all-r6.37.gtf.gz" to "data", and rename it to "flybase_r6.gtf.gz".
+cd data
+wget ftp://ftp.flybase.org/genomes/dmel/current/gtf/dmel-all-r6.37.gtf.gz
+mv dmel-all-r6.37.gtf.gz flybase_r6.gtf.gz
